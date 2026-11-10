@@ -17,7 +17,7 @@ export function gerarPdf(list: Lancamento[]): { blob: Blob; nome: string } {
   doc.setFont("helvetica", "normal"); doc.setFontSize(10);
   doc.text(`Período: ${d0} a ${d1}   ·   Emitido em ${new Date().toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" })}`, 14, 20);
 
-  const boxes: [string, string][] = [["Lançamentos", String(list.length)], ["Valor total", brl(t.bruto)], ["Valor líquido", brl(t.liquido)]];
+  const boxes: [string, string][] = [["Lançamentos", String(list.length)], ["Valor bruto", brl(t.bruto)], ["Valor líquido", brl(t.liquido)]];
   const bw = (W - 28 - 8) / 3;
   boxes.forEach(([l, v], i) => {
     const x = 14 + i * (bw + 4), destaque = i === 2;

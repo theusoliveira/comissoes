@@ -237,7 +237,7 @@ export default function Comissoes({ inicial }: { inicial: Lancamento[] }) {
 
       <div className="totals">
         <div><small>Lançamentos</small><strong>{filtrados.length}</strong></div>
-        <div><small>Valor total</small><strong>{brl(t.bruto)}</strong></div>
+        <div><small>Valor bruto</small><strong>{brl(t.bruto)}</strong></div>
         <div className="net"><small>Valor líquido (comissão)</small><strong>{brl(t.liquido)}</strong></div>
       </div>
 
